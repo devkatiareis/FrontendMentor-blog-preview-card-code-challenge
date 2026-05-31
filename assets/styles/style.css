@@ -21,3 +21,157 @@
   /* Typography */
   --font-main: "Figtree", sans-serif;
 }
+
+/* Body Layout */
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* Main Container to wrap the Card */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* --- Card Component --- */
+.card {
+  background-color: var(--color-white);
+  max-width: 384px; /* Ideal size for mobile and desktop */
+  width: 100%;
+  border: 1px solid var(--color-grey-pure);
+  border-radius: 20px;
+  padding: 24px;
+  /* Neo-brutalism shadow: solid and sharp (no blur) */
+  box-shadow: 8px 8px 0px 0px var(--color-grey-pure);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Automatically manages uniform spacing between fields */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Interactive Hover & Focus States */
+.card:hover,
+.card:focus-visible {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px 0px var(--color-grey-pure);
+  cursor: pointer;
+}
+
+/* Trigger title color change when the card is focused via keyboard */
+.card:hover .card-title,
+.card:focus-visible .card-title {
+  color: var(--color-primary);
+  -webkit-text-stroke: 0.5px var(--color-secondary);
+}
+
+/* --- ACCESSIBILITY (:focus-visible) --- */
+/* Removes the default browser focus ring and adds a custom high-contrast style */
+.card:focus-visible,
+.attribution a:focus-visible {
+  outline: 3px solid var(--color-focus-outline);
+  outline-offset: 4px;
+}
+
+/* Card Image Wrapper */
+.card-image-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Category Tag */
+.badge {
+  align-self: flex-start;
+  background-color: var(--color-primary);
+  color: var(--color-grey-pure);
+  font-weight: 800;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+/* Publication Date */
+.publish-date {
+  font-size: 14px;
+  color: var(--color-grey-pure);
+  font-weight: 500;
+}
+
+/* Article Title */
+.card-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-grey-pure);
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+/* Description Text */
+.post-excerpt {
+  font-size: 16px;
+  color: var(--color-grey-medium);
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Author Section --- */
+.author-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-grey-pure);
+}
+
+/* --- Attribution Footer --- */
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--color-grey-pure);
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.attribution a {
+  color: var(--color-white);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-white);
+  transition: color 0.2s ease;
+  border-radius: 2px; /* Smooth edge for the focus ring */
+}
+
+.attribution a:hover {
+  color: var(--color-grey-pure);
+  border-bottom: 1px solid var(--color-grey-pure);
+}
