@@ -10,13 +10,14 @@
 :root {
   /* Frontend Mentor Official Color Palette */
   --color-primary: #f4d04e;     /* Vibrant yellow */
-  --color-secondary: #CFA200;     /* Dark yellow */
+  --color-secondary: #CFA200;   /* Dark yellow */
   --color-white: #ffffff;       /* Card background */
   --color-grey-pure: #111111;   /* Dark text, borders, and shadows */
   --color-grey-medium: #6B6B6B; /* Description text and date */
 
   /* Accessibility Colors */
   --color-focus-outline: #005fcc; /* High-contrast blue for keyboard navigation focus */
+  --color-link-dark: #1a2eb3;     /* Accessible dark blue for footer links */
 
   /* Typography */
   --font-main: "Figtree", sans-serif;
@@ -59,24 +60,21 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Interactive Hover & Focus States */
-.card:hover,
-.card:focus-visible {
+/* Interactive Hover States for the Card container */
+.card:hover {
   transform: translate(-4px, -4px);
   box-shadow: 12px 12px 0px 0px var(--color-grey-pure);
   cursor: pointer;
 }
 
-/* Trigger title color change when the card is focused via keyboard */
-.card:hover .card-title,
-.card:focus-visible .card-title {
+/* Changes title color when the parent card container is hovered */
+.card:hover .card-title-link {
   color: var(--color-primary);
-  -webkit-text-stroke: 0.5px var(--color-secondary);
 }
 
 /* --- ACCESSIBILITY (:focus-visible) --- */
-/* Removes the default browser focus ring and adds a custom high-contrast style */
-.card:focus-visible,
+/* High-contrast custom outlines for keyboard navigation users */
+.card-title-link:focus-visible,
 .attribution a:focus-visible {
   outline: 3px solid var(--color-focus-outline);
   outline-offset: 4px;
@@ -115,13 +113,26 @@ body {
   font-weight: 500;
 }
 
-/* Article Title */
+/* Article Title Heading Container */
 .card-title {
   font-size: 24px;
   font-weight: 800;
-  color: var(--color-grey-pure);
   line-height: 1.3;
+}
+
+/* Interactive Link within the Heading */
+.card-title-link {
+  color: var(--color-grey-pure);
+  text-decoration: none;
   transition: color 0.2s ease;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Link Hover and Keyboard Focus State */
+.card-title-link:hover,
+.card-title-link:focus-visible {
+  color: var(--color-primary);
 }
 
 /* Description Text */
@@ -163,12 +174,12 @@ body {
 }
 
 .attribution a {
-  color: var(--color-white);
+  color: var(--color-link-dark); /* Darker blue color for WCAG legal contrast on yellow bg */
   font-weight: 700;
   text-decoration: none;
-  border-bottom: 1px dotted var(--color-white);
-  transition: color 0.2s ease;
-  border-radius: 2px; /* Smooth edge for the focus ring */
+  border-bottom: 1px dotted var(--color-link-dark);
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+  border-radius: 2px;
 }
 
 .attribution a:hover {

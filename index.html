@@ -1,81 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Katia Reis | Blog Preview Card</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katia Reis | Blog Preview Card</title>
 
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="./assets/images/favicon-kreis-32x32.png"
-  />
-  <link rel="stylesheet" href="./assets/styles/style.css" />
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-kreis-32x32.png"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <main
+      class="main-container"
+      aria-label="Blog preview card challenge by Frontend Mentor"
+    >
+      <section aria-labelledby="blog-heading">
+        <!-- Card Structure -->
+        <article class="card">
+          <!-- Card Image -->
+          <div class="card-image-container">
+            <img
+              class="card-image"
+              src="./assets/images/illustration-article.svg"
+              alt="Abstract geometric shapes illustration representing web development concepts"
+            />
+          </div>
 
-  <main
-    class="main-container"
-    aria-label="Blog preview card challenge by Frontend Mentor"
-  >
-    <section aria-labelledby="blog-heading">
-      <!-- Card Structure -->
-      <article class="card" tabindex="0">
-        <!-- Card Image -->
-        <div class="card-image-container">
-          <img
-            class="card-image"
-            src="./assets/images/illustration-article.svg"
-            alt="Ilustração abstrata"
-          />
-        </div>
+          <!-- Post Tags -->
+          <span class="badge">Learning</span>
 
-        <!-- Post Tags -->
-        <span class="badge">Learning</span>
+          <!-- Publication Date (post-meta class removed for code cleanup) -->
+          <p class="publish-date">
+            Published <time datetime="2026-05-31">31 May 2026</time>
+          </p>
 
-        
+          <!-- Article Title (The proper interactive element with aria-heading linked) -->
+          <h1 id="blog-heading" class="card-title">
+            <a href="#" class="card-title-link">HTML & CSS foundations</a>
+          </h1>
 
-        <p class="publish-date post-meta">
-          <time datetime="2026-05-31">31 de Maio de 2026</time>
-        </p>
+          <p class="post-excerpt">
+            These languages are the backbones of every website, defining
+            structure, content, and presentation.
+          </p>
 
-        <h3 class="card-title">HTML & CSS foundations</h3>
+          <!-- Author Information -->
+          <div class="author-container">
+            <img
+              class="author-avatar"
+              src="./assets/images/avatar-kreis-65x65.png"
+              alt="Katia Reis, designer and developer"
+            />
+            <span class="author-name">Katia Reis</span>
+          </div>
+        </article>
+      </section>
+    </main>
 
-        <p class="post-excerpt">
-          These languages are the backbones of every website, defining
-          structure, content, and presentation.
-        </p>
-
-        <!-- Author Information -->
-        <div class="author-container">
-          <img
-            class="author-avatar"
-            src="./assets/images/avatar-kreis-65x65.png"
-            alt="Katia Reis, designer and developer"
-          />
-          <span class="author-name">Katia Reis</span>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="attribution post-meta">
-    Challenge by
-    <a
-      href="https://www.frontendmentor.io?ref=challenge"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Frontend Mentor</a
-    >. Coded by
-    <a
-      href="https://github.com/devkatiareis/FrontendMentor-blog-preview-card-code-challenge"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Katia Reis</a
-    >.
-  </footer>
-
-</body>
+    <!-- Footer -->
+    <footer class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/devkatiareis/FrontendMentor-blog-preview-card-code-challenge"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Katia Reis</a
+      >.
+    </footer>
+  </body>
 </html>
