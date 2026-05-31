@@ -1,0 +1,23 @@
+/* --- Reset Styles and Variables --- */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Frontend Mentor Official Color Palette */
+  --color-primary: #f4d04e;     /* Vibrant yellow */
+  --color-secondary: #CFA200;     /* Dark yellow */
+  --color-white: #ffffff;       /* Card background */
+  --color-grey-pure: #111111;   /* Dark text, borders, and shadows */
+  --color-grey-medium: #6B6B6B; /* Description text and date */
+
+  /* Accessibility Colors */
+  --color-focus-outline: #005fcc; /* High-contrast blue for keyboard navigation focus */
+
+  /* Typography */
+  --font-main: "Figtree", sans-serif;
+}
